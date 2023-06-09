@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruitment Portal</title>
+    <link rel="stylesheet" href="Home.css"
+</head>
+<body>
+    <header>
+        <h2 class="logo"><a href="Home.Html"><img src="logo.webp" alt="Logo" width="90" height="90"></a></a></h2>
+        <nav class="navigation">
+            <a href="Home.Html">Home </a>
+            <a href="About.html">About</a>
+            <a href="# ">Services</a>
+            <a href="# ">Contact</a>
+            <a href="login.html"><button class="btmLogin-pop">Login</button></a>
+            <a href="# ">Contact</a>
+        </nav>
+    </header>
+
+    <h1>Recruitment Website</h1>
+     
+<div class="page">
+    <div class="Candidate">
+       </div>    
+
+<script src="script.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  axios.get('/api/users')
+    .then(function(response) {
+      console.log(response.data); // Process the retrieved data
+    })
+    .catch(function(error) {
+      console.error('Error retrieving users:', error);
+    });
+</script
+
+
+</body>
+</html>

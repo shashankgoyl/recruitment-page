@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruitment Portal</title>
+    <link rel="stylesheet" href="login.css"/>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+</head>
+<body>
+
+    <header>
+        <h2 class="logo"><a href="Home.Html"><img src="logo.webp" alt="Logo" width="90" height="90"></a></a></h2>
+        <nav class="navigation">
+            <a href="Home.html">Home </a>
+            <a href="About.html">About</a>
+            <a href="# ">Services</a>
+            <a href="# ">Contact</a>
+            <a href="login.html"><button class="btmLogin-pop">Login</button></a>
+    
+        </nav>
+    </header>
+
+
+    <div class="container" style="background-color:powderblue;" >
+        <div class="calendar">
+          <div class="month">
+            <i class="fas fa-angle-left prev"></i>
+            <div class="date">
+              <h1></h1>
+              <p></p>
+            </div>
+            <i class="fas fa-angle-right next"></i>
+          </div>
+          <div class="weekdays">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+          </div>
+          <div class="days"></div>
+        </div>
+      </div>
+
+    <form class="box" action="login.html" method="POST">
+
+        <h1>
+            Login
+        </h1>
+
+        <input type="email" name="" placeholder="Enter Email ID" id="userid">
+        <input type="password" name="" placeholder="Enter Password" id="password">
+        <input type="submit" name="" value="Login" onclick="validate()">
+        <div class="login-register">
+            <p style="background-color:powderblue; ">Don't have an account ?<a href="register.html" class="register-link">Register</a></p>
+        </div>
+
+    </form>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  axios.get('/api/users')
+    .then(function(response) {
+      console.log(response.data); // Process the retrieved data
+    })
+    .catch(function(error) {
+      console.error('Error retrieving users:', error);
+    });
+</script>
+    
+</body>
+</html>

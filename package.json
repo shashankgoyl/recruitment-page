@@ -1,0 +1,11 @@
+{
+  "name": "recruitment",
+  "version": "1.0.0",
+  "description": "Registration",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Shashank",
+  "license": "MIT"
+}
